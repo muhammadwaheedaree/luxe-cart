@@ -25,6 +25,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   ])
   const [newReview, setNewReview] = useState({ author: '', rating: 5, comment: '' })
 
+  useEffect(() => {
+    // Assuming reviews might be fetched from an API in a real application
+    // If you plan to fetch data for reviews or related products from an API, this is where you'd do it.
+  }, [])
+
   if (!product) {
     return <div className="container mx-auto px-6 py-16 text-center text-purple-400">Product not found</div>
   }
@@ -182,4 +187,3 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     </div>
   )
 }
-
