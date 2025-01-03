@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getProductById, getRelatedProducts } from '../../data/products'
 import AddToCartButton from '../../components/AddToCartButton'
+import ProductCard from '../../components/ProductCard'
 import { Star, Truck, RefreshCw, ShieldCheck } from 'lucide-react'
 
 interface Review {
@@ -25,16 +26,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   ])
   const [newReview, setNewReview] = useState({ author: '', rating: 5, comment: '' })
 
-  useEffect(() => {
-    // Assuming reviews might be fetched from an API in a real application
-    // If you plan to fetch data for reviews or related products from an API, this is where you'd do it.
-  }, [])
-
   if (!product) {
-    return <div className="container mx-auto px-6 py-16 text-center text-purple-400">Product not found</div>
+    return <div className="container mx-auto px-4 sm:px-6 py-16 text-center text-purple-400">Product not found</div>
   }
 
-  const relatedProducts = getRelatedProducts(product)
+  const relatedProducts = getRelatedProducts(product, 5)
 
   const handleReviewSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -49,7 +45,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="container mx-auto px-6 py-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <div className="container mx-auto px-4 sm:px-6 py-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <Image src={product.image} alt={product.name} width={500} height={500} className="w-full h-auto rounded-lg shadow-md" />
@@ -169,21 +165,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       {/* Related Products Section */}
       <div className="mt-16">
         <h2 className="text-2xl font-bold mb-8 text-purple-300">Related Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {relatedProducts.map((relatedProduct) => (
-            <div key={relatedProduct.id} className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
-              <Image src={relatedProduct.image} alt={relatedProduct.name} width={300} height={300} className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-purple-300">{relatedProduct.name}</h3>
-                <p className="text-purple-400 mb-2">${relatedProduct.price.toFixed(2)}</p>
-                <Link href={`/products/${relatedProduct.id}`} className="text-purple-500 hover:text-purple-400">
-                  View Details
-                </Link>
-              </div>
-            </div>
+            <ProductCard key={relatedProduct.id} product={relatedProduct} />
           ))}
         </div>
       </div>
     </div>
   )
 }
+

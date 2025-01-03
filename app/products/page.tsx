@@ -22,8 +22,37 @@ export default function ProductsPage() {
 
   return (
     <div className="container mx-auto px-6 py-16">
+      {/* Product of the Day Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold mb-8 text-center text-primary-400">Product of the Day</h2>
+        <div className="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-xl overflow-hidden">
+          <div className="md:flex">
+            <div className="md:flex-shrink-0">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt="Product of the Day"
+                width={600}
+                height={400}
+                className="h-full w-full object-cover md:w-48"
+              />
+            </div>
+            <div className="p-8">
+              <div className="uppercase tracking-wide text-sm text-indigo-300 font-semibold">Special Offer</div>
+              <a href="#" className="block mt-1 text-lg leading-tight font-medium text-white hover:underline">Luxury Smartwatch Pro</a>
+              <p className="mt-2 text-gray-300">Experience the pinnacle of technology and style with our Luxury Smartwatch Pro. Limited time offer!</p>
+              <div className="mt-4">
+                <span className="text-3xl font-bold text-white">$299.99</span>
+                <span className="ml-2 text-lg text-gray-400 line-through">$399.99</span>
+              </div>
+              <Link href="/products/1" className="inline-block mt-4 bg-white text-purple-900 px-4 py-2 rounded-full font-semibold hover:bg-purple-100 transition-colors">
+                Shop Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <h1 className="text-4xl font-bold mb-8 text-center text-primary-400">Our Products</h1>
-      
+
       <div className="flex justify-center mb-12">
         <div className="inline-flex rounded-md shadow-sm" role="group">
           {categories.map((category) => (
@@ -46,15 +75,15 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         {displayedProducts.map((product) => (
-          <motion.div 
-            key={product.id} 
+          <motion.div
+            key={product.id}
             className="bg-surface rounded-lg shadow-md overflow-hidden"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}

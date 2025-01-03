@@ -80,6 +80,26 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
+
+      {/* Customer Stories Section */}
+      <div className="my-16 bg-gray-900 py-12 px-6">
+        <h2 className="text-3xl font-semibold mb-8 text-center text-primary-300">Customer Stories</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            { name: "Sarah L.", story: "LuxeCart's attention to detail and quality is unmatched. I'm a customer for life!", image: "/placeholder.svg?height=300&width=300" },
+            { name: "James M.", story: "The VIP treatment I receive from LuxeCart makes me feel valued every time I shop.", image: "/placeholder.svg?height=300&width=300" },
+            { name: "Emma K.", story: "LuxeCart has transformed my shopping experience. Their curated collections are always on point!", image: "/placeholder.svg?height=300&width=300" }
+          ].map((customer, index) => (
+            <div key={index} className="bg-surface p-6 rounded-lg shadow-md flex flex-col h-full">
+              <div className="flex items-center mb-4">
+                <Image src={customer.image} alt={customer.name} width={60} height={60} className="rounded-full mr-4" />
+                <h3 className="font-semibold text-primary-300">{customer.name}</h3>
+              </div>
+              <p className="text-text-secondary italic flex-grow">{customer.story}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

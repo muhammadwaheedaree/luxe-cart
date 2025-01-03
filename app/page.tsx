@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Star, Truck, RefreshCw, ShieldCheck, Award, Gift, Clock } from 'lucide-react'
 import { getFeaturedProducts, products } from './data/products'
+import ProductCard from './components/ProductCard'
 
 export default function Home() {
   const featuredProducts = getFeaturedProducts()
@@ -36,11 +37,11 @@ export default function Home() {
               className="brightness-50"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white animate-fade-in">
+              <div className="text-center px-4">
+                <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 text-white animate-fade-in">
                   {product.name}
                 </h1>
-                <p className="text-xl mb-8 text-gray-300 animate-fade-in-delay">
+                <p className="text-lg md:text-xl mb-8 text-gray-300 animate-fade-in-delay">
                   {product.description}
                 </p>
                 <Link
@@ -57,30 +58,18 @@ export default function Home() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center text-purple-300">Featured Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {featuredProducts.map((product) => (
-            <div key={product.id} className="bg-gray-800 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-              <Image src={product.image} alt={product.name} width={300} height={300} className="w-full h-64 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-purple-300">{product.name}</h3>
-                <p className="text-gray-400 mb-4">{product.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-purple-400">${product.price.toFixed(2)}</span>
-                  <Link href={`/products/${product.id}`} className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
-                    View Details
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="bg-gray-800 py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">Why Choose LuxeCart?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -103,27 +92,18 @@ export default function Home() {
       </section>
 
       {/* New Arrivals Section */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center text-purple-300">New Arrivals</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.slice(0, 4).map((product) => (
-            <div key={product.id} className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
-              <Image src={product.image} alt={product.name} width={300} height={300} className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-purple-300">{product.name}</h3>
-                <p className="text-purple-400 mb-2">${product.price.toFixed(2)}</p>
-                <Link href={`/products/${product.id}`} className="text-purple-500 hover:text-purple-400">
-                  View Details
-                </Link>
-              </div>
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="bg-gray-800 py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">What Our Customers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -151,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">Our Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
@@ -174,20 +154,20 @@ export default function Home() {
 
       {/* Newsletter Section */}
       <section className="bg-purple-600 text-white py-16">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="mb-8">Subscribe to our newsletter for exclusive offers and the latest updates.</p>
           <form className="max-w-md mx-auto">
-            <div className="flex">
-              <input type="email" placeholder="Your email address" className="flex-grow px-4 py-2 rounded-l-md focus:outline-none bg-white text-gray-900" />
-              <button type="submit" className="bg-gray-900 text-white px-6 py-2 rounded-r-md hover:bg-gray-800 transition-colors">Subscribe</button>
+            <div className="flex flex-col sm:flex-row">
+              <input type="email" placeholder="Your email address" className="flex-grow px-4 py-2 mb-2 sm:mb-0 sm:rounded-l-md focus:outline-none bg-white text-gray-900" />
+              <button type="submit" className="bg-gray-900 text-white px-6 py-2 rounded-md sm:rounded-l-none hover:bg-gray-800 transition-colors">Subscribe</button>
             </div>
           </form>
         </div>
       </section>
 
-      {/* New Section: Luxury Showcase */}
-      <section className="container mx-auto px-6 py-16">
+      {/* Luxury Showcase Section */}
+      <section className="container mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">Luxury Showcase</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative h-96 rounded-lg overflow-hidden">
@@ -213,6 +193,52 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Luxury Brands Section */}
+      <section className="bg-gray-900 py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">Our Luxury Brands</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            {[
+              { name: "Rolex", logo: "/placeholder.svg?height=80&width=160&text=Rolex" },
+              { name: "Gucci", logo: "/placeholder.svg?height=80&width=160&text=Gucci" },
+              { name: "Louis Vuitton", logo: "/placeholder.svg?height=80&width=160&text=Louis+Vuitton" },
+              { name: "Cartier", logo: "/placeholder.svg?height=80&width=160&text=Cartier" },
+              { name: "Hermès", logo: "/placeholder.svg?height=80&width=160&text=Hermès" },
+              { name: "Chanel", logo: "/placeholder.svg?height=80&width=160&text=Chanel" },
+            ].map((brand) => (
+              <div key={brand.name} className="flex items-center justify-center">
+                <Image src={brand.logo} alt={brand.name} width={160} height={80} className="opacity-70 hover:opacity-100 transition-opacity" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Featured Collections Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center text-white">Featured Collections</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {['Electronics', 'Fashion', 'Home'].map((category) => (
+              <div key={category} className="relative overflow-hidden rounded-lg shadow-lg group">
+                <Image
+                  src={`/placeholder.svg?height=400&width=600&text=${category}`}
+                  alt={category}
+                  width={600}
+                  height={400}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Link href={`/products?category=${category}`} className="bg-white text-purple-900 px-6 py-2 rounded-full font-semibold hover:bg-purple-100 transition-colors">
+                    Shop Now
+                  </Link>
+                </div>
+                <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">{category}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
