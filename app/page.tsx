@@ -107,9 +107,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">What Our Customers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "David Wilson", comment: "LuxeCart has the best selection of premium products. Their customer service is top-notch!", image: "/images/customers/image1.png?height=100&width=100" },
-              { name: "Jane Smith", comment: "I love the quality of products from LuxeCart. Fast shipping and easy returns make shopping here a breeze.", image: "/images/customers/image2.png?height=100&width=100" },
-              { name: "Mike Johnson", comment: "The user experience on LuxeCart is fantastic. It's my go-to place for all things luxury.", image: "/images/customers/image3.png?height=100&width=100" }
+              { name: "David Wilson", comment: "LuxeCart has the best selection of premium products. Their customer service is top-notch!", image: "/images/custumers/image1.png?height=100&width=100" },
+              { name: "Jane Smith", comment: "I love the quality of products from LuxeCart. Fast shipping and easy returns make shopping here a breeze.", image: "/images/custumers/image2.png?height=100&width=100" },
+              { name: "Mike Johnson", comment: "The user experience on LuxeCart is fantastic. It's my go-to place for all things luxury.", image: "/images/custumers/image3.png?height=100&width=100" }
             ].map((testimonial, i) => (
               <div key={i} className="bg-gray-900 p-6 rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
