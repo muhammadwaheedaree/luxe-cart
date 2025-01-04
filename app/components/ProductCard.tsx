@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Product } from '@/data/products'
+import { Product } from '../data/products'
 
 interface ProductCardProps {
   product: Product

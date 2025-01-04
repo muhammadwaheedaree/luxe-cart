@@ -16,7 +16,7 @@ export const products: Product[] = [
     price: 199.99,
     description: "Stay connected with this stylish and feature-packed smartwatch.",
     additionalInfo: "Water-resistant, 3-day battery life, heart rate monitor",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/electronics/sleek-smartwatch.jpg",
   },
   {
     id: "2",
@@ -25,7 +25,7 @@ export const products: Product[] = [
     price: 129.99,
     description: "Immerse yourself in crystal-clear audio with these comfortable earbuds.",
     additionalInfo: "Noise-cancelling, 24-hour battery life, touch controls",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/electronics/wireless-earbuds.jpg",
   },
   {
     id: "3",
@@ -34,7 +34,7 @@ export const products: Product[] = [
     price: 249.99,
     description: "Capture your adventures in stunning 4K resolution.",
     additionalInfo: "Waterproof, image stabilization, Wi-Fi connectivity",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/electronics/4k-action-camera.jpg",
   },
   {
     id: "4",
@@ -43,7 +43,7 @@ export const products: Product[] = [
     price: 129.99,
     description: "Keep your home safe with this advanced security camera.",
     additionalInfo: "1080p HD, night vision, two-way audio, mobile app control",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/electronics/smart-home-security-camera.jpg",
   },
   {
     id: "5",
@@ -52,7 +52,7 @@ export const products: Product[] = [
     price: 89.99,
     description: "Carry your essentials in style with this premium leather bag.",
     additionalInfo: "Genuine leather, multiple compartments, adjustable strap",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/fashion/leather-messenger-bag.jpg",
   },
   {
     id: "6",
@@ -61,7 +61,7 @@ export const products: Product[] = [
     price: 159.99,
     description: "Protect your eyes and look fabulous with these trendy sunglasses.",
     additionalInfo: "UV protection, polarized lenses, durable frame",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/fashion/designer-sunglasses.jpg",
   },
   {
     id: "7",
@@ -70,7 +70,7 @@ export const products: Product[] = [
     price: 299.99,
     description: "Make a statement with this elegant timepiece.",
     additionalInfo: "Swiss movement, sapphire crystal, genuine leather strap",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/fashion/luxury-watch.jpg",
   },
   {
     id: "8",
@@ -79,7 +79,7 @@ export const products: Product[] = [
     price: 199.99,
     description: "Elevate your style with this elegant designer handbag.",
     additionalInfo: "Genuine leather, multiple compartments, detachable strap",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/fashion/designer-handbag.jpg",
   },
   {
     id: "9",
@@ -88,7 +88,7 @@ export const products: Product[] = [
     price: 199.99,
     description: "Work in comfort with this adjustable and supportive chair.",
     additionalInfo: "Lumbar support, breathable mesh, 360-degree swivel",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/home/ergonomic-office-chair.jpg",
   },
   {
     id: "10",
@@ -97,7 +97,7 @@ export const products: Product[] = [
     price: 79.99,
     description: "Transform your home lighting with these app-controlled LED bulbs.",
     additionalInfo: "16 million colors, voice control compatible, energy-efficient",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/home/smart-led-bulb-set.jpg",
   },
   {
     id: "11",
@@ -106,7 +106,7 @@ export const products: Product[] = [
     price: 69.99,
     description: "Add warmth and style to your living space with this cozy blanket.",
     additionalInfo: "100% premium cotton, machine washable, multiple colors available",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/home/luxury-throw-blanket.jpg",
   },
   {
     id: "12",
@@ -115,7 +115,7 @@ export const products: Product[] = [
     price: 149.99,
     description: "Control your home's temperature with this intelligent thermostat.",
     additionalInfo: "Wi-Fi enabled, energy-saving, voice control compatible",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/home/smart-thermostat.jpg",
   },
   {
     id: "13",
@@ -124,7 +124,7 @@ export const products: Product[] = [
     price: 49.99,
     description: "Make smoothies on-the-go with this compact and powerful blender.",
     additionalInfo: "Rechargeable battery, BPA-free materials, easy to clean",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/kitchen/portable-blender.jpg",
   },
   {
     id: "14",
@@ -133,7 +133,7 @@ export const products: Product[] = [
     price: 129.99,
     description: "Elevate your culinary skills with this professional-grade knife set.",
     additionalInfo: "High-carbon stainless steel, ergonomic handles, includes knife block",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/kitchen/chefs-knife-set.jpg",
   },
   {
     id: "15",
@@ -142,7 +142,7 @@ export const products: Product[] = [
     price: 159.99,
     description: "Brew the perfect cup of coffee with this app-controlled machine.",
     additionalInfo: "Customizable brewing options, scheduled brewing, keep-warm function",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/kitchen/smart-coffee-maker.png",
   },
   {
     id: "16",
@@ -151,7 +151,7 @@ export const products: Product[] = [
     price: 89.99,
     description: "Enjoy healthier fried foods with this versatile air fryer.",
     additionalInfo: "6-quart capacity, digital controls, dishwasher-safe parts",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/images/products/kitchen/air-fryer.png",
   },
 ];
 

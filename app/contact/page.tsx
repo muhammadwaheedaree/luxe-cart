@@ -56,7 +56,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center">
               <Phone className="w-6 h-6 text-accent-400 mr-2" />
-              <span className="text-text-secondary">+1 (555) 123-4567</span>
+              <span className="text-text-secondary">+92 (323) 829-3672</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-6 h-6 text-accent-400 mr-2" />
@@ -127,7 +127,7 @@ export default function ContactPage() {
         <div className="bg-surface rounded-lg shadow-md p-6">
           <div className="aspect-w-16 aspect-h-9 mb-6">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215171442683!2d-73.98823492397516!3d40.75784413560431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1685113359918!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14482.471993038563!2d66.4959539!3d25.1929837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1696241267919!5m2!1sen!2s" 
               width="600" 
               height="450" 
               style={{border:0}} 
@@ -148,7 +148,7 @@ export default function ContactPage() {
           <h3 className="text-xl font-semibold mb-4 text-white">Start a Live Chat</h3>
           <p className="text-gray-300 mb-6">Our customer support team is available 24/7 to assist you with any questions or concerns.</p>
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/923180297567"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-purple-900 px-6 py-3 rounded-full font-semibold hover:bg-purple-100 transition-colors"

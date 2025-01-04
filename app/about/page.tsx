@@ -16,8 +16,14 @@ export default function AboutPage() {
             Our team of experts carefully selects each item in our inventory, ensuring that it meets our high standards for quality, design, and functionality. From cutting-edge electronics to timeless fashion pieces, we offer a diverse range of products to suit every taste and need.
           </p>
         </div>
-        <div className="relative h-64 md:h-auto">
-          <Image src="/placeholder.svg?height=400&width=600" alt="LuxeCart Office" layout="fill" objectFit="cover" className="rounded-lg shadow-md" />
+        <div className="relative w-full h-64 md:h-96">
+          <Image 
+            src="/images/office.jpg?height=400&width=600" 
+            alt="LuxeCart Office" 
+            fill 
+            style={{ objectFit: 'cover' }}
+            className="rounded-lg shadow-md" 
+          />
         </div>
       </div>
 
@@ -27,8 +33,8 @@ export default function AboutPage() {
           {[
             { icon: Award, title: "Quality", description: "We never compromise on the quality of our products." },
             { icon: Users, title: "Customer Satisfaction", description: "Your happiness is our top priority." },
-            { icon: Zap, title: "Innovation", description: "We're always looking for new ways to improve your shopping experience." },
-            { icon: Heart, title: "Passion", description: "We're passionate about bringing luxury to your everyday life." }
+            { icon: Zap, title: "Innovation", description: "We are always looking for new ways to improve your shopping experience." },
+            { icon: Heart, title: "Passion", description: "We are passionate about bringing luxury to your everyday life." }
           ].map((value, index) => (
             <div key={index} className="bg-surface p-6 rounded-lg shadow-md text-center">
               <value.icon className="w-12 h-12 mx-auto mb-4 text-accent-400" />
@@ -65,14 +71,14 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold mb-8 text-center text-primary-300">Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
-            { name: "Jane Doe", role: "CEO", image: "/placeholder.svg?height=300&width=300" },
-            { name: "John Smith", role: "CTO", image: "/placeholder.svg?height=300&width=300" },
-            { name: "Emily Brown", role: "Head of Design", image: "/placeholder.svg?height=300&width=300" },
-            { name: "Michael Johnson", role: "Customer Service Manager", image: "/placeholder.svg?height=300&width=300" }
+            { name: "Waheed Aree", role: "CEO", image: "/images/team/image.png" },
+            { name: "John Smith", role: "CTO", image: "/images/team/image1.png" },
+            { name: "Emily Brown", role: "Head of Design", image: "/images/team/image2.png" },
+            { name: "Michael Johnson", role: "Customer Service Manager", image: "/images/team/image3.png" }
           ].map((member, index) => (
             <div key={index} className="text-center">
               <div className="relative w-32 h-32 mx-auto mb-4">
-                <Image src={member.image} alt={member.name} layout="fill" objectFit="cover" className="rounded-full" />
+                <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover' }} className="rounded-full" />
               </div>
               <h3 className="font-semibold text-primary-300">{member.name}</h3>
               <p className="text-text-secondary">{member.role}</p>
@@ -86,13 +92,15 @@ export default function AboutPage() {
         <h2 className="text-3xl font-semibold mb-8 text-center text-primary-300">Customer Stories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            { name: "Sarah L.", story: "LuxeCart's attention to detail and quality is unmatched. I'm a customer for life!", image: "/placeholder.svg?height=300&width=300" },
-            { name: "James M.", story: "The VIP treatment I receive from LuxeCart makes me feel valued every time I shop.", image: "/placeholder.svg?height=300&width=300" },
-            { name: "Emma K.", story: "LuxeCart has transformed my shopping experience. Their curated collections are always on point!", image: "/placeholder.svg?height=300&width=300" }
+            { name: "Sarah L.", story: "LuxeCart attention to detail and quality is unmatched. I am a customer for life!", image: "/images/testimonials/image1.png" },
+            { name: "James M.", story: "The VIP treatment I receive from LuxeCart makes me feel valued every time I shop.", image: "/images/testimonials/image2.png" },
+            { name: "Emma K.", story: "LuxeCart has transformed my shopping experience. Their curated collections are always on point!", image: "/images/testimonials/image.png" }
           ].map((customer, index) => (
             <div key={index} className="bg-surface p-6 rounded-lg shadow-md flex flex-col h-full">
               <div className="flex items-center mb-4">
-                <Image src={customer.image} alt={customer.name} width={60} height={60} className="rounded-full mr-4" />
+                <div className="relative w-16 h-16 mr-4">
+                  <Image src={customer.image} alt={customer.name} fill style={{ objectFit: 'cover' }} className="rounded-full" />
+                </div>
                 <h3 className="font-semibold text-primary-300">{customer.name}</h3>
               </div>
               <p className="text-text-secondary italic flex-grow">{customer.story}</p>

@@ -107,9 +107,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">What Our Customers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "John Doe", comment: "LuxeCart has the best selection of premium products. Their customer service is top-notch!", image: "/placeholder.svg?height=100&width=100" },
-              { name: "Jane Smith", comment: "I love the quality of products from LuxeCart. Fast shipping and easy returns make shopping here a breeze.", image: "/placeholder.svg?height=100&width=100" },
-              { name: "Mike Johnson", comment: "The user experience on LuxeCart is fantastic. It's my go-to place for all things luxury.", image: "/placeholder.svg?height=100&width=100" }
+              { name: "David Wilson", comment: "LuxeCart has the best selection of premium products. Their customer service is top-notch!", image: "/images/customers/image1.png?height=100&width=100" },
+              { name: "Jane Smith", comment: "I love the quality of products from LuxeCart. Fast shipping and easy returns make shopping here a breeze.", image: "/images/customers/image2.png?height=100&width=100" },
+              { name: "Mike Johnson", comment: "The user experience on LuxeCart is fantastic. It's my go-to place for all things luxury.", image: "/images/customers/image3.png?height=100&width=100" }
             ].map((testimonial, i) => (
               <div key={i} className="bg-gray-900 p-6 rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
@@ -171,7 +171,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">Luxury Showcase</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative h-96 rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg?height=600&width=800" alt="Luxury Watch" layout="fill" objectFit="cover" />
+            <Image src="/images/products/fashion/luxury-watch.jpg?height=600&width=800" alt="Luxury Watch" layout="fill" objectFit="cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">Exquisite Timepieces</h3>
@@ -183,7 +183,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-96 rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg?height=600&width=800" alt="Designer Handbag" layout="fill" objectFit="cover" />
+            <Image src="/images/products/fashion/designer-handbag.jpg?height=600&width=800" alt="Designer Handbag" layout="fill" objectFit="cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">Designer Handbags</h3>
@@ -203,12 +203,12 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center text-purple-300">Our Luxury Brands</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
-              { name: "Rolex", logo: "/placeholder.svg?height=80&width=160&text=Rolex" },
-              { name: "Gucci", logo: "/placeholder.svg?height=80&width=160&text=Gucci" },
-              { name: "Louis Vuitton", logo: "/placeholder.svg?height=80&width=160&text=Louis+Vuitton" },
-              { name: "Cartier", logo: "/placeholder.svg?height=80&width=160&text=Cartier" },
-              { name: "Hermès", logo: "/placeholder.svg?height=80&width=160&text=Hermès" },
-              { name: "Chanel", logo: "/placeholder.svg?height=80&width=160&text=Chanel" },
+              { name: "Rolex", logo: "/images/brands/rolex.png?height=80&width=160&text=Rolex" },
+              { name: "Gucci", logo: "/images/brands/gucci.png?height=80&width=160&text=Gucci" },
+              { name: "Louis Vuitton", logo: "/images/brands/louis.png?height=80&width=160&text=Louis+Vuitton" },
+              { name: "Cartier", logo: "/images/brands/cartier.png?height=80&width=160&text=Cartier" },
+              { name: "Hermès", logo: "/images/brands/hermes.png?height=80&width=160&text=Hermès" },
+              { name: "Chanel", logo: "/images/brands/chenel.png?height=80&width=160&text=Chanel" },
             ].map((brand) => (
               <div key={brand.name} className="flex items-center justify-center">
                 <Image src={brand.logo} alt={brand.name} width={160} height={80} className="opacity-70 hover:opacity-100 transition-opacity" />
@@ -217,7 +217,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Featured Collections Section */}
+      {/* { Featured Collections Section} */}
       <section className="py-16 bg-gradient-to-r from-purple-900 to-indigo-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center text-white">Featured Collections</h2>
@@ -225,7 +225,7 @@ export default function Home() {
             {['Electronics', 'Fashion', 'Home'].map((category) => (
               <div key={category} className="relative overflow-hidden rounded-lg shadow-lg group">
                 <Image
-                  src={`/placeholder.svg?height=400&width=600&text=${category}`}
+                  src={`/images/collections/${category.toLowerCase()}.jpg`}
                   alt={category}
                   width={600}
                   height={400}
@@ -241,7 +241,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> 
     </div>
   )
 }

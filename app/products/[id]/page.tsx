@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { getProductById, getRelatedProducts } from '../../data/products'
 import AddToCartButton from '../../components/AddToCartButton'
 import ProductCard from '../../components/ProductCard'
@@ -20,9 +19,9 @@ interface Review {
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = getProductById(params.id)
   const [reviews, setReviews] = useState<Review[]>([
-    { id: 1, author: 'John Doe', rating: 5, comment: 'Excellent product! Highly recommended.', date: '2023-05-15', image: '/placeholder.svg?height=50&width=50' },
-    { id: 2, author: 'Jane Smith', rating: 4, comment: 'Good quality, but a bit pricey.', date: '2023-05-10', image: '/placeholder.svg?height=50&width=50' },
-    { id: 3, author: 'Mike Johnson', rating: 5, comment: 'Exceeded my expectations. Will buy again!', date: '2023-05-05', image: '/placeholder.svg?height=50&width=50' },
+    { id: 1, author: 'Noah Blake', rating: 5, comment: 'Excellent product! Highly recommended.', date: '2023-05-15', image: '/images/reviews/image1.png?height=50&width=50' },
+    { id: 2, author: 'Olivia Bennett', rating: 4, comment: 'Good quality, but a bit pricey.', date: '2023-05-10', image: '/images/reviews/image2.png?height=50&width=50' },
+    { id: 3, author: 'James Walker', rating: 5, comment: 'Exceeded my expectations. Will buy again!', date: '2023-05-05', image: '/images/reviews/image3.png?height=50&width=50' },
   ])
   const [newReview, setNewReview] = useState({ author: '', rating: 5, comment: '' })
 
@@ -38,7 +37,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       id: reviews.length + 1,
       ...newReview,
       date: new Date().toISOString().split('T')[0],
-      image: '/placeholder.svg?height=50&width=50', // Default profile image
+      image: '/images/reviews/default.png?height=50&width=50', // Default profile image
     }
     setReviews([reviewToAdd, ...reviews])
     setNewReview({ author: '', rating: 5, comment: '' })
@@ -171,7 +170,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           ))}
         </div>
       </div>
-    </div>
+  </div>
   )
 }
 
