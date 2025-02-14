@@ -20,7 +20,7 @@ Check out the live version of LuxeCart:
 
 ## 📞 Contact
 For any inquiries or collaborations, feel free to reach out:
-- **Email:** muhammadwaheed128@gmail.com
+- **Email:** muhammadwaheedaree128@gmail.com
 
 ---
 
